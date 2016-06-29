@@ -1,0 +1,91 @@
+
+
+/***********************************
+ESTILIZACAO DE ACORDO COM O BROWSER
+***********************************/
+
+/*Mozilla Firefox 4 to 18*/
+input:-moz-placeholder {
+  line-height: 0;
+}
+
+/*---Mozilla Firefox 19+---*/
+input::-moz-placeholder {
+	line-height:0;
+}
+
+ /* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+  line-height: 0;
+}
+
+
+/**************************************
+FIM ESTILIZACAO DE ACORDO COM O BROWSER
+**************************************/
+
+
+
+/**************************************
+PARA TODOS
+**************************************/
+
+
+
+body {
+    overflow-x: hidden!important;
+	font-size: 1.4em !important;
+	background-image:url(../img/desert_camo.gif);
+}
+
+/**************************************
+FIM PARA TODOS;
+**************************************/
+
+
+.box_shadow{
+	box-shadow: 3px 3px 3px #efe19d;
+}
+
+.barra_navegacao{
+
+	background-color: #988D66 !important;
+	opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    border: 0 !important;
+}
+
+
+.main_header{
+	margin-top: 2.3em;
+	text-align: center;
+	height:450px;
+	background-image:url(../img/bg_main_aeg.jpg);
+	
+}
+
+
+#logo{
+	width:577px;
+	height:267px;
+}
+
+
+#aeg{
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

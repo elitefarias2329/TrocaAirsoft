@@ -1,0 +1,98 @@
+<!-- JQUERY DATA TABLES CSS -->
+
+/*Linhas Zebradas*/
+
+table.dataTable tr.odd{
+	
+}
+
+table.dataTable tr.even{
+	
+}
+
+ 
+table.dataTable td{
+	text-align:left;
+}
+ 
+ /**
+* Representa a TD do displayTable que contém as informações da quantidade de resulados a exibir ---> Ex:. Mostrar 5 registros
+**/
+.dataTables_length{
+	margin-top:.7em !important;
+	text-align:left !important;
+	font-style:italic;
+} 
+
+.dataTables_length label{
+	font-size:1em !important;
+	font-weight:normal !important;
+	color:#FE7902;
+}
+
+.dataTables_length select{
+	/*color:#2C3E50;*/
+	border-color:#CECECE;
+	width: 150px;
+} 
+
+
+/**
+* Representa a TD do displayTable que contém as informações de Paginação ---> Ex:. Primeira Anterior 123 Próxima Última	
+**/
+.dataTables_paginate{
+	
+	text-align: left;
+	margin-top:2em !important;
+}
+
+.dataTables_paginate a{
+	cursor: pointer;
+	margin:.3em !important;
+	color:#2C3E50 !important;
+	outline:none !important;
+}
+
+.dataTables_paginate a:hover{
+	color:#FE7902 !important;
+}
+
+.paginate_active{
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/**
+* Representa a TD do displayTable que contém as informações de Display ---> Ex:. Mostrando 1 até 5 de 13 registros:	
+**/
+
+.dataTables_info{
+	margin-top: .2em !important;
+	text-align:left !important;
+}
+
+/**
+* Representa a TD do displayTable que contém as informações de filtro ---> Ex:. Filtrar Resultado:	
+**/
+
+.dataTables_filter{
+	text-align:left;
+}
+
+.dataTables_filter label{
+	font-size:1em !important;
+	font-weight:normal !important;
+	font-style:italic;
+	color:#FE7902;
+}
+
+.dataTables_filter input{
+	border: 1px solid !important;
+	border-color:#CECECE !important;
+	width:150px;
+	margin-left:1.5em;
+
+}
+
+
