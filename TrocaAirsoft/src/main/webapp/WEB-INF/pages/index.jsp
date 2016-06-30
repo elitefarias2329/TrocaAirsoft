@@ -31,14 +31,6 @@
 	    <script src="includes/js/cbpAnimatedHeader.js"></script>
        	<script src="includes/js/jquery.multiselect.js"></script>
 	
-    <script type="text/javascript">
-    
-		$( document ).ready(function() {
-		});
-    
-    
-    </script>
-
 </head>
 
 <body>
@@ -83,7 +75,7 @@
         	<div class="row">
         	
         		<div class="col-lg-3">
-					<!-- <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/.png"> -->	
+				    <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/logo.png"> 	
 				</div>
 				
 				<div class="col-lg-9">        	
