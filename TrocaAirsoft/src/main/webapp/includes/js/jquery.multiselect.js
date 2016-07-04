@@ -32,7 +32,7 @@ $.widget("ech.multiselect", {
 		classes: '',
 		checkAllText: 'Marcar Todos',
 		uncheckAllText: 'Desmarcar Todos',
-		noneSelectedText: 'Selecionar',
+		noneSelectedText: '-- Selecionar -- ',
 		selectedText: '# Selecionado(s)',
 		selectedList: 0,
 		show: null,

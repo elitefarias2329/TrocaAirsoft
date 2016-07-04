@@ -3,16 +3,69 @@
 /*Linhas Zebradas*/
 
 table.dataTable tr.odd{
-	
 }
 
 table.dataTable tr.even{
-	
 }
 
- 
+
+.tab_grid_result_td_aeg_thumb{
+	text-align: center !important;"
+}
+
+.tab_grid_result_td_aeg_title_link{
+	font-size:1.6em;
+	color:#988D66;
+}
+
+.tab_grid_result_td_aeg_title_link:hover,
+.tab_grid_result_td_aeg_title_link:active
+{
+	color:#988D66;
+}
+
+.tab_grid_result_td_aeg_title_link:visited{
+	/*color:#930080;*/
+}
+
+.tab_grid_result_td_aeg_marca{
+	font-size:1.2em;
+	color:#745A49;
+}
+
+.tab_grid_result_td_aeg_preco{
+	font-size:1.2em;
+	color:red;
+}
+
+.tab_grid_result_td_aeg_anunciante{
+	font-size:1.6em;
+}
+
+.tab_grid_result_td_aeg_lista_desejos{
+	font-size:1.2em;
+	color:#988D66;
+	cursor: pointer;
+}
+
+.tab_grid_result_td_aeg_lista_desejos:hover,
+.tab_grid_result_td_aeg_lista_desejos:active
+{
+	color:#988D66;
+}
+
+.tab_grid_result_td_aeg_lista_desejos:visited{
+	/*color:#930080;*/
+}
+
+
 table.dataTable td{
 	text-align:left;
+	background-color:#FFF;
+	border-bottom:solid 3px #988D66 !important;
+	color:#988D66;
+	font-size: 1.4em;
+	font-family:sans-serif;
 }
  
  /**
@@ -21,18 +74,16 @@ table.dataTable td{
 .dataTables_length{
 	margin-top:.7em !important;
 	text-align:left !important;
-	font-style:italic;
 } 
 
 .dataTables_length label{
-	font-size:1em !important;
+	font-size:1.4em !important;
 	font-weight:normal !important;
-	color:#FE7902;
+	color:#745A49;
 }
 
 .dataTables_length select{
-	/*color:#2C3E50;*/
-	border-color:#CECECE;
+	border-color:#988D66;
 	width: 150px;
 } 
 
@@ -44,17 +95,22 @@ table.dataTable td{
 	
 	text-align: left;
 	margin-top:2em !important;
+	background-color: #745A49;
+	border-radius: 10px ;
+	padding: 5px;
 }
 
 .dataTables_paginate a{
 	cursor: pointer;
 	margin:.3em !important;
-	color:#2C3E50 !important;
+	color:#EFE09D !important;
 	outline:none !important;
+	font-size: 1.4em;
+	
 }
 
 .dataTables_paginate a:hover{
-	color:#FE7902 !important;
+	color:#EFE09D !important;
 }
 
 .paginate_active{
@@ -70,6 +126,8 @@ table.dataTable td{
 .dataTables_info{
 	margin-top: .2em !important;
 	text-align:left !important;
+    color:#745A49 !important;
+	font-size: 1.4em;
 }
 
 /**
@@ -81,18 +139,13 @@ table.dataTable td{
 }
 
 .dataTables_filter label{
-	font-size:1em !important;
+	font-size:1.4em !important;
 	font-weight:normal !important;
-	font-style:italic;
-	color:#FE7902;
+	color:#745A49;
 }
 
 .dataTables_filter input{
-	border: 1px solid !important;
-	border-color:#CECECE !important;
 	width:150px;
-	margin-left:1.5em;
-
 }
 
 
