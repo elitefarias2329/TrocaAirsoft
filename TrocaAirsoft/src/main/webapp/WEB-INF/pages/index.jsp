@@ -14,9 +14,11 @@
     <!--CSS -->
     <link href="includes/css/css.css" rel="stylesheet">
     <link href="includes/css/bootstrap.css" rel="stylesheet">
+    <link href="includes/css/normalize.css" rel="stylesheet">
     <link href="includes/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="includes/css/jquery-ui.structure.css" rel="stylesheet">
     <link href="includes/css/jquery-ui.theme.css" rel="stylesheet">
+    
 
     <!-- jQuery -->
     <script src="includes/js/jquery.js"></script>
@@ -31,12 +33,11 @@
 	    <script src="includes/js/cbpAnimatedHeader.js"></script>
        	<script src="includes/js/jquery.multiselect.js"></script>
 	
-</head>
+	</head>
 
-<body>
-
+	<body>
 	
-        <!-- ************************************************************************************************** -->
+		<!-- ************************************************************************************************** -->
         <!-- BARRA DE NAVEGAÇÃO -->
         <!-- ************************************************************************************************** -->
 
@@ -46,7 +47,7 @@
 			<div class="container-fluid">
 
 				<div id="div_toggle" class="navbar-header">
-	
+				
     				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -57,38 +58,78 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <ul class="nav navbar-nav">
+        			<li><a href="#"><i class="fa fa-crosshairs" aria-hidden="true"></i> Home</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs" aria-hidden="true"></i> Armeiros</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs" aria-hidden="true"></i> Times</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs" aria-hidden="true"></i> Eventos</a></li> 
+        		</ul>	
 				</div>
-				
           </div>
         </nav>
+		
 		<!-- ************************************************************************************************** -->
         <!--  FIM BARRA DE NAVEGAÇÃO -->
         <!-- ************************************************************************************************** -->
 
-
-		<!-- ************************************************************************************************** -->
+	
+        
+        <!-- ************************************************************************************************** -->
 	   	<!-- HEADER FUNDO IMAGEM -->
 		<!-- ************************************************************************************************** -->    
 	  
-        <div class="main_header ">
+        <div class="main_header">
         	
-        	<div class="row">
-        	
-        		<div class="col-lg-3">
-				    <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/logo.png"> 	
-				</div>
-				
-				<div class="col-lg-9">        	
+			<div class="container-fluid">
+	        	<div class="row">
+	        	
+	        		<div class="col-lg-3">
+					    <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/logo.png"> 	
+					</div>
 					
-				</div>
-				
-        	</div>
+					<div class="col-lg-9">        	
+						
+					</div>
+					
+	        	</div>
+	        </div>	
         </div>   
 
 	     <!-- ************************************************************************************************** -->
 	     <!-- FIM HEADER FUNDO IMAGEM -->
 	     <!-- ************************************************************************************************** -->
-            
+	     
+	     
+	     <!-- ************************************************************************************************** -->
+	   	<!-- DIV'S TROCA EQUIPAMENTO -->
+		<!-- ************************************************************************************************** -->    
+	  
+        <div class="">
+        	
+			<div class="container-fluid">
+	        	
+	        	<div class="row">
+	        	
+	        		<div class="col-lg-1"></div>
+	        		
+	        		<div class="col-lg-4 div_equip">
+					    Tenho Equipamento 	
+					</div>
+					<div class="col-lg-2"></div>
+					
+					<div class="col-lg-4 div_equip" >        	
+						Desejo Equipamento
+					</div>
+					
+					<div class="col-lg-1"></div>
+					
+	        	</div>
+	        </div>	
+        </div>   
+
+	     <!-- ************************************************************************************************** -->
+	     <!-- FIM DIV'S TROCA EQUIPAMENTO -->
+	     <!-- ************************************************************************************************** -->     
               
        
         

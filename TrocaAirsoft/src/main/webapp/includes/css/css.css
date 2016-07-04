@@ -53,6 +53,16 @@ FIM PARA TODOS;
 	opacity: 0.8;
     filter: alpha(opacity=80); /* For IE8 and earlier */
     border: 0 !important;
+    
+}
+
+.barra_navegacao a{
+	color: #EFE09D !important;
+	font-size: 1.4em;
+}
+
+.barra_navegacao a:hover{
+	color: #FFFFFF !important;
 }
 
 
@@ -73,9 +83,12 @@ FIM PARA TODOS;
 }
 
 
-#aeg{
+.div_equip{
 	
-	
+	margin-top: 1em;
+	text-align: center;	
+	background-color: #EFE09D !important;
+	height: 400px;
 }
 
 
