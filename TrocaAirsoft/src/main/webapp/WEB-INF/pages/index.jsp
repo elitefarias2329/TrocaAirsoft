@@ -41,6 +41,8 @@
 
    			$( document ).ready(function() {
 
+   				$("#logo").show("drop", 1300);
+   				
    				$("#combo_local").multiselect({
    				   show: ["explode", 500],
    				   hide: ["explode", 1000],
@@ -78,7 +80,7 @@
         		});
 
    				
-     			
+   				
    				oTable = $('#tab_grid_result').dataTable({
    					
    	    			"bSort": true,
@@ -171,31 +173,20 @@
             				<li><a href="#"><i class="fa fa-long-arrow-right"></i> O que é Airsoft?</a></li>
             				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Legislação</a></li>
             				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Dicionário</a></li>
+            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Dicas</a></li>
 				            
           				</ul>
         			</li>
         			
-        			<li class="dropdown">
-          				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-          					<i class="fa fa-crosshairs"></i> 
-          					Serviços
-          					<span class="caret"></span>
-          				</a>
-          				
-          				<ul class="dropdown-menu">
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Manutenção e Reparo (Armeiros)</a></li>
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Pintura e Camuflagem</a></li>
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Aluguel de Equipamento</a></li>
-          				</ul>
-        			</li>
-        			
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Parceiros</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs"></i> Armeiros</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs"></i> Pintura e Camuflagem</a></li>
+        			<li><a href="#"><i class="fa fa-crosshairs"></i> Aluguel de Equipamento</a></li>
 					<li><a href="#"><i class="fa fa-crosshairs"></i> Times</a></li>
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Eventos</a></li>
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Vídeos</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Dicas</a></li>
+        			
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Fale Conosco</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Sobre Nós</a></li>
         		</ul>	
 				</div>
           </div>
@@ -215,8 +206,8 @@
 			<div class="container-fluid">
 	        	<div class="row">
 	        		
-	        		<div class="col-lg-3">
-					    <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/logo.png">
+	        		<div id="div_logo" class="col-lg-3">
+					    <img id="logo"  alt="Troca Airsoft" title="Troca Airsoft" src="includes/img/logo.png"  style="display:none;">
 					    <p class="logo_frase">"Airsoft com Economia!"</p> 	
 					</div>
 					
@@ -234,376 +225,381 @@
 	     <!-- ************************************************************************************************** -->
 	     
 	     
-	     <!-- ************************************************************************************************** -->
-	   	<!-- DIV'S TROCA EQUIPAMENTO -->
-		<!-- ************************************************************************************************** -->    
+	        
 	  
 		<div class="container-fluid">
         	
-        	<div class="row">
+        	<!-- ************************************************************************************************** -->
+	   		<!-- DIV'S DESTAQUE PREMIUM -->
+			<!-- ************************************************************************************************** -->
+        	<div class="row" style="width:30%;float:left;">
+        		<div class="col-lg-11 div_equip div_destaque_premium" >
+        			<p><i class="fa fa-star"></i>&nbsp;Destaques</p>
+        		</div>	
+        	</div>
+        	<!-- ************************************************************************************************** -->
+	   		<!-- FIM DIV'S DESTAQUE PREMIUM -->
+			<!-- ************************************************************************************************** -->
         	
-        		<div class="col-lg-1"></div>
+        
+        	<!-- ************************************************************************************************** -->
+	   		<!-- DIV'S TROCA EQUIPAMENTO -->
+			<!-- ************************************************************************************************** -->
+        
+        	<div class="row" style="width:70%;float:right;">
         		
-        		<div class="col-lg-4 div_equip">
-				    <p>Tenho Equipamento para Trocar</p>
-				    <div align="center">
-				    	<button class="bt_acao"><i class="fa fa-bullhorn"></i>&nbsp;Anunciar</button>
-				    </div>
-				    <br/>
-				    <font>* Para anunciar seu equipamento para trocar, você deve estar logado.</font>
-				</div>
-				
-				<div class="col-lg-2"></div>
-				
-				<div class="col-lg-4 div_equip">        	
-					<p>Desejo Encontrar Algum Equipamento</p>
-					
-					<table class="table_grupo_filtro">
-						<tr>
-							<td>
-								<font>Local:</font>
-							</td>
-							<td>
-								<select multiple id="combo_local">
-									<option value="1">Rio de Janeiro</option>
-		                            <option value="2">São Paulo</option>
-		                            <option value="3">Minas Gerais</option>
-		                        </select>
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<font>Marcador:</font>
-							</td>
-							<td>
-								<select multiple id="combo_marcador">
-									<optgroup label="Sistema de Disparo">
-										<option value="1">Elétrica (AEG/AEP)</option>
-		                            	<option value="2">Gás (GBB)</option>
-									</optgroup>
-									
-									<optgroup label="Marca">
-										<option value="4">King Arms</option>
-		                            	<option value="5">ARES</option>
-		                            	<option value="5">Echo1</option>
-		                            	<option value="5">Krytac</option>
-		                            	<option value="5">APS</option>
-		                            	
-									</optgroup>
-									
-									<optgroup label="Modelo">
-										<option value="4">M4</option>
-		                            	<option value="5">AK</option>
-									</optgroup>
-									
-		                           <optgroup label="Características">
-		                            	<option value="6">Full Metal</option>
-		                            	<option value="7">Semi Metal</option>
-		                            	<option value="8">BlowBack</option>
-		                            </optgroup>
-		                        </select>  
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<font>Loadout:</font>
-							</td>
-							<td>
-								<select multiple id="combo_loadout">
-									<option value="1">Óculos de Proteção</option>
-									<option value="2">Máscara</option>
-									<option value="3">Luva</option>
-									<option value="4">Farda Completa</option>
-									<option value="5">Calça</option>
-									<option value="6">Gandola</option>
-									<option value="7">Camisa Tática</option>
-									<option value="7">Cuturno/Bota</option>
-		                        </select>  
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<font>Acessórios:</font>
-							</td>
-							<td>
-								<select multiple id="combo_acessorios">
-									<option value="1">Red Dot</option>
-									<option value="2">Protetor de Red Dot</option>
-									<option value="3">Luneta</option>
-									<option value="4">Trilho 22mm</option>
-									<option value="5">Mount</option>
-									<option value="6">Lanterna</option>
-									<option value="7">Laser</option>
-		                        </select>  
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<font>Upgrade:</font>
-							</td>
-							<td>
-								<select multiple id="combo_upgrade">
-									<option value="1">Mola</option>
-									<option value="2">Cilindro</option>
-									<option value="4">Cabeça de Cilindro</option>
-									<option value="3">Pistão</option>
-									<option value="4">Cabeça de Pistão</option>
-									<option value="5">Cano de Precisão</option>
-									<option value="6">Hop-up</option>
-									<option value="7">Air Nozzle</option>
-									<option value="7">Bucking</option>
-									<option value="7">Fiação</option>
-									<option value="7">Motor</option>
-		                        </select>  
-							</td>
-						</tr>
-						
-						<tr>
-							<td>
-								<font>Outros:</font>
-							</td>
-							<td>
-								<select multiple id="combo_outros">
-									<option value="1">BB's 0.20g</option>
-									<option value="1">BB's 0.25g</option>
-									<option value="4">Alvo</option>
-									<option value="3">Patch</option>
-		                        </select>  
-							</td>
-						</tr>
-						
-					</table>
-					
-					<br/>
-					
-					<div>
-						<font><input type="checkbox"  class="checkbox-inline"/> Novo</font>
-						&nbsp;&nbsp;
-						<font><input type="checkbox"  class="checkbox-inline"/> Usado</font>
-						&nbsp;&nbsp;
-						<font><input type="checkbox"  class="checkbox-inline"/> Venda e Troca</font>
-						&nbsp;&nbsp;
-						<font><input type="checkbox"  class="checkbox-inline"/> Somente Venda</font>
+	        	<div class="row">
+		        	
+		        	<div class="col-lg-5 div_equip">
+					    <p><i class="fa fa-exchange"></i>&nbsp;Tenho Equipamento para Trocar</p>
+					    <div align="center">
+					    	<button class="bt_acao"><i class="fa fa-bullhorn"></i>&nbsp;Anunciar</button>
+					    </div>
+					    <br/>
+					    <font>* Para anunciar seu equipamento para trocar, você deve estar logado.</font>
+					    <br/><br/>
+					    <font>* Caracterize o produto de maneira realista, pois informações fiéis atuam em benfício de todos.</font>
 					</div>
-					
+				
+				
+				
+					<div class="col-lg-6 div_equip">        	
+						<p><i class="fa fa-binoculars"></i>&nbsp;Desejo Encontrar Algum Equipamento</p>
+						
+						<table class="table_grupo_filtro">
+							<tr>
+								<td>
+									<font>Local:</font>
+								</td>
+								<td>
+									<select multiple id="combo_local">
+										<option value="1">Rio de Janeiro</option>
+			                            <option value="2">São Paulo</option>
+			                            <option value="3">Minas Gerais</option>
+			                        </select>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<font>Marcador:</font>
+								</td>
+								<td>
+									<select multiple id="combo_marcador">
+										<optgroup label="Sistema de Disparo">
+											<option value="1">Elétrica (AEG/AEP)</option>
+			                            	<option value="2">Gás (GBB)</option>
+										</optgroup>
+										
+										<optgroup label="Marca">
+											<option value="4">King Arms</option>
+			                            	<option value="5">ARES</option>
+			                            	<option value="5">Echo1</option>
+			                            	<option value="5">Krytac</option>
+			                            	<option value="5">APS</option>
+			                            	
+										</optgroup>
+										
+										<optgroup label="Modelo">
+											<option value="4">M4</option>
+			                            	<option value="5">AK</option>
+										</optgroup>
+										
+			                           <optgroup label="Características">
+			                            	<option value="6">Full Metal</option>
+			                            	<option value="7">Semi Metal</option>
+			                            	<option value="8">BlowBack</option>
+			                            </optgroup>
+			                        </select>  
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<font>Loadout:</font>
+								</td>
+								<td>
+									<select multiple id="combo_loadout">
+										<option value="1">Óculos de Proteção</option>
+										<option value="2">Máscara</option>
+										<option value="3">Luva</option>
+										<option value="4">Farda Completa</option>
+										<option value="5">Calça</option>
+										<option value="6">Gandola</option>
+										<option value="7">Camisa Tática</option>
+										<option value="7">Cuturno/Bota</option>
+			                        </select>  
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<font>Acessórios:</font>
+								</td>
+								<td>
+									<select multiple id="combo_acessorios">
+										<option value="1">Red Dot</option>
+										<option value="2">Protetor de Red Dot</option>
+										<option value="3">Luneta</option>
+										<option value="4">Trilho 22mm</option>
+										<option value="5">Mount</option>
+										<option value="6">Lanterna</option>
+										<option value="7">Laser</option>
+			                        </select>  
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<font>Upgrade:</font>
+								</td>
+								<td>
+									<select multiple id="combo_upgrade">
+										<option value="1">Mola</option>
+										<option value="2">Cilindro</option>
+										<option value="4">Cabeça de Cilindro</option>
+										<option value="3">Pistão</option>
+										<option value="4">Cabeça de Pistão</option>
+										<option value="5">Cano de Precisão</option>
+										<option value="6">Hop-up</option>
+										<option value="7">Air Nozzle</option>
+										<option value="7">Bucking</option>
+										<option value="7">Fiação</option>
+										<option value="7">Motor</option>
+			                        </select>  
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<font>Outros:</font>
+								</td>
+								<td>
+									<select multiple id="combo_outros">
+										<option value="1">BB's 0.20g</option>
+										<option value="1">BB's 0.25g</option>
+										<option value="4">Alvo</option>
+										<option value="3">Patch</option>
+			                        </select>  
+								</td>
+							</tr>
+							
+						</table>
+						
+						<br/>
+						
+						<div>
+							<font><input type="checkbox"  class="checkbox-inline"/> Novo</font>
+							&nbsp;&nbsp;
+							<font><input type="checkbox"  class="checkbox-inline"/> Usado</font>
+							&nbsp;&nbsp;
+							<font><input type="checkbox"  class="checkbox-inline"/> Venda e Troca</font>
+							&nbsp;&nbsp;
+							<font><input type="checkbox"  class="checkbox-inline"/> Somente Venda</font>
+						</div>
+						
 						<div align="center">
-				    	<button class="bt_acao"><i class="fa fa-search"></i>&nbsp;Procurar</button>
-				    </div>
-					
-					
-				</div>
-				
-				<div class="col-lg-1"></div>
-				
+					    	<button class="bt_acao"><i class="fa fa-search"></i>&nbsp;Procurar</button>
+					    </div>
+						
+					</div>
+	        	</div>
+			    <!-- ************************************************************************************************** -->
+			    <!-- FIM DIV'S TROCA EQUIPAMENTO -->
+			    <!-- ************************************************************************************************** -->  
+	        	
+	        	<div class="row">
+				<!-- ************************************************************************************************** -->
+	     		<!-- TABLE GRID RESULTADO PESQUISA -->
+	     		<!-- ************************************************************************************************** -->
+	    
+	    		<br/>
+	    		<br/>  
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12" style="text-align:center;" >
+							<table id="tab_grid_result" class="table" style="width:96% !important;">
+								
+								<thead style="display:none;">
+									<tr>
+		        	                	<th>Foto</th>
+		                                <th>Infos Marcador</th>
+		                                <th>Infos Anunciante</th>
+		                            </tr>
+								</thead>
+					     		
+					     		<tbody>
+						     		
+						     		<tr>
+						     			<td class="tab_grid_result_td_aeg_thumb">
+						     				<img alt="M4" title="M4" src="includes/thumbnail/g36_thumb_160x160.jpg">
+						     			</td>
+						     			
+						     			<td>
+						     				<a href="#" class="tab_grid_result_td_aeg_title_link">G36 - AEG - Full Metal</a>
+						     					<br/>
+							     				<font class="tab_grid_result_td_aeg_marca">Echo1</font>
+						     					<br/>
+							     				<font class="tab_grid_result_td_aeg_preco">R$:1.750,00</font>
+						     					<br/>
+						     					Novo / Somente Venda
+						     					
+						     			</td>
+						     			
+						     			<td>
+						     				<font class="tab_grid_result_td_aeg_anunciante">André Farias</font>
+						     				<br/>
+						     				<i>Rio de Janeiro / Rio de Janeiro</i>
+						     				
+						     				<br/><br/>
+						     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
+						     			</td>
+						     		</tr>
+						     		
+						     		<tr>
+						     			<td class="tab_grid_result_td_aeg_thumb">
+						     				<img alt="M4" title="M4" src="includes/thumbnail/glock_thumb_160x160.jpg">
+						     			</td>
+						     			
+						     			<td>
+						     				<a href="#" class="tab_grid_result_td_aeg_title_link">Glock CM121 - AEP - Semi Metal</a>
+						     					<br/>
+							     				<font class="tab_grid_result_td_aeg_marca">Cyma</font>
+						     					<br/>
+							     				<font class="tab_grid_result_td_aeg_preco">R$:999,00</font>
+						     					<br/>
+						     					Novo / Somente Venda
+						     					
+						     			</td>
+						     			
+						     			<td>
+						     				<font class="tab_grid_result_td_aeg_anunciante">Guilherme Moreno</font>
+						     				<br/>
+						     				<i>São Gonçalo / Rio de Janeiro</i>
+						     				<br/><br/>
+						     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>
+						     			</td>
+						     		</tr>
+						     		
+						     		<tr>
+						     			<td class="tab_grid_result_td_aeg_thumb">
+						     				<img alt="Tavor" title="Tavor" src="includes/thumbnail/tavor_thumb_160x160.jpg">
+						     			</td>
+						     			
+						     			<td>
+						     				<a href="#" class="tab_grid_result_td_aeg_title_link">Tavor (TAR 21) - AEG - Semi Metal</a>
+						     				<br/>
+						     				<font class="tab_grid_result_td_aeg_marca">Ares</font>
+						     				<br/>
+						     				<font class="tab_grid_result_td_aeg_preco">R$:1.999,00</font>
+						     				<br/>
+						     				Usado / Venda e Troca
+						     			</td>
+						     			
+						     			<td>
+						     				<font class="tab_grid_result_td_aeg_anunciante">Dilan Santos</font>
+						     				<br/>
+						     				<i>São Gonçalo / Rio de Janeiro</i>
+						     				<br/><br/>
+						     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
+						     			</td>
+						     		</tr>
+						     		
+						     		<tr>
+						     			<td class="tab_grid_result_td_aeg_thumb">
+						     				<img alt="M4" title="M4" src="includes/thumbnail/m4_thumb_160x160.jpg">
+						     			</td>
+						     			
+						     			<td>
+						     				<a href="#" class="tab_grid_result_td_aeg_title_link">M4 - AEG - Full Metal - BlowBack</a>
+						     				<br/>
+						     				<font class="tab_grid_result_td_aeg_marca">King Arms</font>
+						     				<br/>
+						     				<font class="tab_grid_result_td_aeg_preco">R$:1.500,00</font>
+						     				<br/>
+						     				Usado / Venda e Troca	
+						     			</td>
+						     			
+						     			<td>
+						     				<font class="tab_grid_result_td_aeg_anunciante">Thiago Silva</font>
+						     				<br/>
+						     				<i>Niterói / Rio de Janeiro</i>
+											<br/><br/>
+						     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
+						     			</td>
+						     		</tr>
+					     		</tbody>
+				     		</table>
+						</div>
+					</div>
+		        </div>		
+			    <!-- ************************************************************************************************** -->
+			    <!-- FIM TABLE GRID RESULTADO PESQUISA -->
+			    <!-- ************************************************************************************************** -->
+	       	    </div>	
         	</div>
         </div>	
 
-	     <!-- ************************************************************************************************** -->
-	     <!-- FIM DIV'S TROCA EQUIPAMENTO -->
-	     <!-- ************************************************************************************************** -->     
-	     
-	     
-	     <!-- ************************************************************************************************** -->
-	     <!-- TABLE GRID RESULTADO PESQUISA -->
-	     <!-- ************************************************************************************************** -->
-	    
-	    <br/>
-	    <br/>  
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12" style="text-align: center;" >
-					<table id="tab_grid_result" class="table">
-						
-						<thead style="display:none;">
-							<tr>
-        	                	<th>Foto</th>
-                                <th>Infos Marcador</th>
-                                <th>Infos Anunciante</th>
-                            </tr>
-						</thead>
-			     		
-			     		<tbody>
-				     		
-				     		<tr>
-				     			<td class="tab_grid_result_td_aeg_thumb">
-				     				<img alt="M4" title="M4" src="includes/thumbnail/g36_thumb_160x160.jpg">
-				     			</td>
-				     			
-				     			<td>
-				     				<a href="#" class="tab_grid_result_td_aeg_title_link">G36 - AEG - Full Metal</a>
-				     					<br/>
-					     				<font class="tab_grid_result_td_aeg_marca">Echo1</font>
-				     					<br/>
-					     				<font class="tab_grid_result_td_aeg_preco">R$:1.750,00</font>
-				     					<br/>
-				     					Novo / Somente Venda
-				     					
-				     			</td>
-				     			
-				     			<td>
-				     				<font class="tab_grid_result_td_aeg_anunciante">André Farias</font>
-				     				<br/>
-				     				<i>Rio de Janeiro / Rio de Janeiro</i>
-				     				
-				     				<br/><br/>
-				     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
-				     			</td>
-				     		</tr>
-				     		
-				     		<tr>
-				     			<td class="tab_grid_result_td_aeg_thumb">
-				     				<img alt="M4" title="M4" src="includes/thumbnail/glock_thumb_160x160.jpg">
-				     			</td>
-				     			
-				     			<td>
-				     				<a href="#" class="tab_grid_result_td_aeg_title_link">Glock CM121 - AEP - Semi Metal</a>
-				     					<br/>
-					     				<font class="tab_grid_result_td_aeg_marca">Cyma</font>
-				     					<br/>
-					     				<font class="tab_grid_result_td_aeg_preco">R$:999,00</font>
-				     					<br/>
-				     					Novo / Somente Venda
-				     					
-				     			</td>
-				     			
-				     			<td>
-				     				<font class="tab_grid_result_td_aeg_anunciante">Guilherme Moreno</font>
-				     				<br/>
-				     				<i>São Gonçalo / Rio de Janeiro</i>
-				     				<br/><br/>
-				     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>
-				     			</td>
-				     		</tr>
-				     		
-				     		<tr>
-				     			<td class="tab_grid_result_td_aeg_thumb">
-				     				<img alt="Tavor" title="Tavor" src="includes/thumbnail/tavor_thumb_160x160.jpg">
-				     			</td>
-				     			
-				     			<td>
-				     				<a href="#" class="tab_grid_result_td_aeg_title_link">Tavor (TAR 21) - AEG - Semi Metal</a>
-				     				<br/>
-				     				<font class="tab_grid_result_td_aeg_marca">Ares</font>
-				     				<br/>
-				     				<font class="tab_grid_result_td_aeg_preco">R$:1.999,00</font>
-				     				<br/>
-				     				Usado / Venda e Troca
-				     			</td>
-				     			
-				     			<td>
-				     				<font class="tab_grid_result_td_aeg_anunciante">Dilan Santos</font>
-				     				<br/>
-				     				<i>São Gonçalo / Rio de Janeiro</i>
-				     				<br/><br/>
-				     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
-				     			</td>
-				     		</tr>
-				     		
-				     		<tr>
-				     			<td class="tab_grid_result_td_aeg_thumb">
-				     				<img alt="M4" title="M4" src="includes/thumbnail/m4_thumb_160x160.jpg">
-				     			</td>
-				     			
-				     			<td>
-				     				<a href="#" class="tab_grid_result_td_aeg_title_link">M4 - AEG - Full Metal - BlowBack</a>
-				     				<br/>
-				     				<font class="tab_grid_result_td_aeg_marca">King Arms</font>
-				     				<br/>
-				     				<font class="tab_grid_result_td_aeg_preco">R$:1.500,00</font>
-				     				<br/>
-				     				Usado / Venda e Troca	
-				     			</td>
-				     			
-				     			<td>
-				     				<font class="tab_grid_result_td_aeg_anunciante">Thiago Silva</font>
-				     				<br/>
-				     				<i>Niterói / Rio de Janeiro</i>
-									<br/><br/>
-				     				<a class="tab_grid_result_td_aeg_lista_desejos"><i class="fa fa-plus-circle"></i>&nbsp;Lista de Desejos</a>	
-				     			</td>
-				     		</tr>
-			     		</tbody>
-		     		</table>
-				</div>
-			</div>
-        </div>		
-        		
-	     <!-- ************************************************************************************************** -->
-	     <!-- FIM TABLE GRID RESULTADO PESQUISA -->
-	     <!-- ************************************************************************************************** -->
-              
 		 
-		 
-		 <!-- ************************************************************************************************** -->
+	    <!-- ************************************************************************************************** -->
 		<!-- SOBRE NÓS-->
 	 	<!-- ************************************************************************************************** -->
-                
-        
-        
-				<div class="row bg-primary sobre_nos">
-        
-			        <div class="col-lg-12 sobre_nos_title">
-                        <h1>Sobre Nós</h1>
-                    </div>
-        
-                    <div class="col-lg-6">
-                        <h3>Nossa História</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 	
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                    </div>                
-        
-                    <div class="col-lg-6">
-                        <h3>Nossa Missão</h3>
-                        <p style="">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 	
-                            wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                            dolor in hendrerit in vulputate velit esse molestie consequat.
-                        </p>
-                    </div>
-                    
-                    <div class="col-lg-6 sobre_nos_narede">
-                        <h3>Na Rede</h3>
-        
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            
-                            <li>
-                                <a href="#" class="btn-social"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            
-                            <li>
-                                <a href="#" class="btn-social"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            
-                            <li>
-                                <a href="#" class="btn-social"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            
-                            <li>
-                                <a href="#" class="btn-social"><i class="fa fa-fw fa-whatsapp"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-lg-6 sobre_nos_narede">
-                    	Copyright&nbsp;&nbsp;www.trocaairsoft.com.br
-                    </div>
-                    
-                </div>
-            
-
-            
-        
-        <!-- ************************************************************************************************** -->
-		<!-- FIM SOBRE NÓS-->
-	 	<!-- ************************************************************************************************** -->             
+		<div class="row bg-primary sobre_nos">
+      
+	        <div class="col-lg-12 sobre_nos_title">
+                      <h1>Sobre Nós</h1>
+                  </div>
+      
+                  <div class="col-lg-6">
+                      <h3>Nossa História</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 	
+                          wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                          dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  </div>                
+      
+                  <div class="col-lg-6">
+                      <h3>Nossa Missão</h3>
+                      <p style="">
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 	
+                          wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                          dolor in hendrerit in vulputate velit esse molestie consequat.
+                      </p>
+                  </div>
+                  
+                  <div class="col-lg-6">
+                      <h3>Na Rede</h3>
+      
+                      <ul class="list-inline sobre_nos_narede">
+                          <li>
+                              <a href="#" class=""><i class="fa fa-fw fa-facebook"></i></a>
+                          </li>
+                          
+                          <li>
+                              <a href="#" class=""><i class="fa fa-fw fa-google-plus"></i></a>
+                          </li>
+                          
+                          <li>
+                              <a href="#" class=""><i class="fa fa-fw fa-twitter"></i></a>
+                          </li>
+                          
+                          <li>
+                              <a href="#" class=""><i class="fa fa-fw fa-linkedin"></i></a>
+                          </li>
+                          
+                          <li>
+                              <a href="#" class=""><i class="fa fa-fw fa-whatsapp"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+                  
+                  <div class="col-lg-6" style="margin-top:2em;">
+                  	Copyright<i class="fa fa-fw fa-copyright"></i>&nbsp;&nbsp;www.trocaairsoft.com.br
+                  </div>
+                  
+              </div>
+	          <!-- ************************************************************************************************** -->
+			  <!-- FIM SOBRE NÓS-->
+	 		  <!-- ************************************************************************************************** -->             
               
 	</body>
 </html>

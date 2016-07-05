@@ -2,12 +2,14 @@
 
 /*Linhas Zebradas*/
 
+
+
+
 table.dataTable tr.odd{
 }
 
 table.dataTable tr.even{
 }
-
 
 .tab_grid_result_td_aeg_thumb{
 	text-align: center !important;"

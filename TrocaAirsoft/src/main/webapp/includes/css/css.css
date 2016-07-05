@@ -82,21 +82,17 @@ FIM PARA TODOS;
 }
 
 .login_criar_conta{
-	margin:1em;
-	font-size: 1.4em;
-	color:#EFE09D;
+	margin:1em !important;
+	font-size: 1.4em !important;
+	color:#EFE09D !important;
 	text-decoration:none !important;
 }
 
 .login_criar_conta:hover{
-	color:#FFF;
+	color:#FFF !important;
 }
 
-.login_criar_conta:active,
-.login_criar_conta:visited{
-	color:#EFE09D;
-	text-decoration:none !important;
-}
+
 
 .logo_frase{
 	font-size: 2em;
@@ -115,7 +111,7 @@ FIM PARA TODOS;
 
 .div_equip{
 	
-	margin-top: 1em;
+	margin: 1em;
 	background-color: #EFE09D !important;
 	height: 500px;
 	border-radius: 10px ;
@@ -130,6 +126,17 @@ FIM PARA TODOS;
 	border-radius:10px ;
 	background-color:#988D66 !important;
 }
+
+.div_destaque_premium{
+	height: 1500px;
+	background-color:#FFF !important;
+}
+
+.div_destaque_premium p{
+	background-color:#EFE09D !important;
+	color:#988D66;
+}
+
 
 .bt_acao {
 	
@@ -170,8 +177,6 @@ FIM PARA TODOS;
 }
 
 
-
-
 .sobre_nos{
 
 	color:#EFE09D !important;
@@ -188,9 +193,15 @@ FIM PARA TODOS;
 }
 
 .sobre_nos_narede a{
+	
 	font-size:1.4em;
 	color:#EFE09D !important;
 	margin: 1em;
+	
+}
+
+.sobre_nos_narede a:hover{
+	color:#FFF !important;
 }
 
 
