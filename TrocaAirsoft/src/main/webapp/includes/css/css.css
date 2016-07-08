@@ -40,14 +40,26 @@ body {
 }
 
 /**************************************
-FIM PARA TODOS;
+FIM PARA TODOS
 **************************************/
 
 
+
+/**************************************
+CLASSES PONTUAIS
+**************************************/
 .box_shadow{
 	box-shadow: 3px 3px 3px #efe19d;
 }
 
+/**************************************
+FIM CLASSES PONTUAIS
+**************************************/
+
+
+/**************************************
+BARRA DE NAVEGAÇÃO
+**************************************/
 .barra_navegacao{
 
 	background-color: #988D66 !important;
@@ -71,7 +83,14 @@ FIM PARA TODOS;
 	background-color: #988D66 !important;
 }
 
+/**************************************
+FIM BARRA DE NAVEGAÇÃO
+**************************************/
 
+
+/**************************************
+HEADER FUNDO IMAGEM 
+**************************************/
 
 .main_header{
 	margin-top: 2.3em;
@@ -81,50 +100,184 @@ FIM PARA TODOS;
 	
 }
 
+/**************************************
+FIM HEADER FUNDO IMAGEM 
+**************************************/
+
+
+/**************************************
+DIV LOGIN/CRIAR CONTA 
+**************************************/
+.container_login_criar_conta{
+	text-align:right;
+}
+
 .login_criar_conta{
-	margin:1em !important;
+	margin-left: 1em !important;
 	font-size: 1.4em !important;
 	color:#EFE09D !important;
 	text-decoration:none !important;
+	outline:none!important;
 }
 
 .login_criar_conta:hover{
 	color:#FFF !important;
 }
 
+/**************************************
+FIM DIV LOGIN/CRIAR CONTA  
+**************************************/
 
 
-.logo_frase{
-	font-size: 2em;
+/**************************************
+DIV BUSCAR  + PESQUISA DETALHADA
+**************************************/
+
+.div_buscar_container{
+	margin-top: 3em;
+}
+
+.div_buscar_text{
+	font-size: 1.4em !important;
+	color:#988D66 !important;
+	height:60px !important;
+	border-radius:10px !important ;
+	padding:5px;
+	text-align:center !important;
+	width: 500px !important;
+	
+}
+
+.link_pesquisa_detalhada{
+	margin-left: 1.4em !important;
+	font-size: 1.2em !important;
+	color:#EFE09D !important;
+	text-decoration:underline;
+	outline:none!important;
+}
+
+.link_pesquisa_detalhada:hover{
+	color:#FFF !important;
+}
+
+
+/**************************************
+FIM DIV BUSCAR  + PESQUISA DETALHADA  
+**************************************/
+
+/**************************************
+DIV MODAL LOGIN 
+**************************************/
+.div_modal_content button{
+	font-size: 1.2em !important;
+	margin: 0.5em !important;
+}
+
+.modal-header{
+	background-image:url(../img/desert_camo.gif) !important;
+}
+
+.div_modal_title{
+	text-align:center; 
+	font-size: 2em !important;
 	color:#EFE09D;
-	font-style:italic;"
 }
 
+.modal-body{
+	text-align:left !important;
+	color:#988D66;
+}
 
+.modal-footer{
+	background-image:url(../img/desert_camo.gif) !important;
+}
+
+.div_esqueci_senha{
+	margin-top: 2em !important;
+}
+
+.div_esqueci_senha font{
+	font-size: 1.4em !important;
+}
+
+/**************************************
+FIM DIV MODAL LOGIN 
+**************************************/
+
+
+/**************************************
+DIV LOGO FRASE
+**************************************/
+.logo_frase{
+	font-size: 1.4em;
+	color:#EFE09D;
+	font-style:italic;
+	margin-top:1em;
+	text-align: right !important;
+	width: 105% !important; /*Se colocar menor a imagem 'Logo' pula ao realizar o 'show('drop',500)' do jQuery*/
+}
+
+/**************************************
+FIM DIV LOGO FRASE
+**************************************/
+
+
+/**************************************
+DIV LOGO
+**************************************/
 #logo{
-	margin-top:4em;
-	margin-left:1em;
-	width:380px;
-	height:300px;
+	margin-top:2em;
 }
 
+/**************************************
+DIV LOGO
+**************************************/
+
+/**************************************
+DIV TROCA EQUIPAMENTO
+**************************************/
 
 .div_equip{
 	
 	margin: 1em;
-	background-color: #EFE09D !important;
-	height: 500px;
 	border-radius: 10px ;
 }
 
 .div_equip p{
-	text-align:center;
+	text-align:center !important;
 	padding:5px;
 	margin-top:.5em;
 	font-size:1.6em;
 	color:#EFE09D;
-	border-radius:10px ;
-	background-color:#988D66 !important;
+}
+
+
+.div_anunciar_container{
+	margin-top:3.5em !important;
+}
+
+.div_anunciar{
+	color:#EFE09D;
+}
+
+.div_anunciar font{
+	font-size:1.8em !important;
+}
+
+
+.div_anunciar button{
+	font-size:2em !important;
+}
+/**************************************
+FIM DIV TROCA EQUIPAMENTO
+**************************************/
+
+/**************************************
+DIV DESTAQUE PREMIUM
+**************************************/
+.container_div_destaque_premium{
+	width:30%;
+	float:left;
 }
 
 .div_destaque_premium{
@@ -137,7 +290,21 @@ FIM PARA TODOS;
 	color:#988D66;
 }
 
+.div_equip font{
+	
+	font-style:italic;
+	font-size: 1.4em;
+	color:#988D66;
 
+}
+
+/**************************************
+FIM DIV DESTAQUE PREMIUM
+**************************************/
+
+/**************************************
+BOTÕES DE AÇÃO
+**************************************/
 .bt_acao {
 	
 	font-size:2em;
@@ -158,15 +325,14 @@ FIM PARA TODOS;
 	
 		 
 }
+/**************************************
+FIM BOTÕES DE AÇÃO
+**************************************/
 
-.div_equip font{
-	
-	font-style:italic;
-	font-size: 1.4em;
-	color:#988D66;
 
-}
- 
+/**************************************
+TABELA FILTRO PESQUISA 
+**************************************/ 
 .table_grupo_filtro {
 	margin-top: 1em;
 }
@@ -176,7 +342,19 @@ FIM PARA TODOS;
 	padding:5px !important;
 }
 
+#div_modal_pesquisa_detalhada{
+	margin-top: 3em !important;
+	z-index:0 !important;
+}
 
+/**************************************
+FIM TABELA FILTRO PESQUISA 
+**************************************/
+
+
+/**************************************
+DIV SOBRE NOS 
+**************************************/
 .sobre_nos{
 
 	color:#EFE09D !important;
@@ -204,6 +382,18 @@ FIM PARA TODOS;
 	color:#FFF !important;
 }
 
+/**************************************
+FIM DIV SOBRE NOS 
+**************************************/
 
+/**************************************
+DIV COPYRIGHT
+**************************************/
+.div_copyright{
+	margin-top:2em !important;
+}
 
+/**************************************
+FIM DIV COPYRIGHT
+**************************************/
 

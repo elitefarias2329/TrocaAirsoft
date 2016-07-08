@@ -33,7 +33,11 @@ if ( 'classList' in document.documentElement ) {
     elem.classList.add( c );
   };
   removeClass = function( elem, c ) {
-    elem.classList.remove( c );
+    if(null != elem){
+    	elem.classList.remove( c );
+    }
+	  
+	  
   };
 }
 else {

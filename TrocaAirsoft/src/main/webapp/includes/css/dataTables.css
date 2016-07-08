@@ -11,6 +11,16 @@ table.dataTable tr.odd{
 table.dataTable tr.even{
 }
 
+
+.container_tab_grid_result{
+	text-align: center !important;"
+}
+
+.tab_grid_result{
+	width:96% !important;
+}
+
+
 .tab_grid_result_td_aeg_thumb{
 	text-align: center !important;"
 }
