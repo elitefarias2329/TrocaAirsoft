@@ -17,7 +17,6 @@ table.dataTable tr.even{
 }
 
 .tab_grid_result{
-	width:96% !important;
 }
 
 
@@ -34,6 +33,7 @@ table.dataTable tr.even{
 .tab_grid_result_td_aeg_title_link:active
 {
 	color:#988D66;
+	opacity: 0.8;
 }
 
 .tab_grid_result_td_aeg_title_link:visited{
@@ -42,12 +42,12 @@ table.dataTable tr.even{
 
 .tab_grid_result_td_aeg_marca{
 	font-size:1.2em;
-	color:#745A49;
+	color:#745A49 !important;
 }
 
 .tab_grid_result_td_aeg_preco{
 	font-size:1.2em;
-	color:red;
+	color:red !important;
 }
 
 .tab_grid_result_td_aeg_anunciante{

@@ -7,7 +7,7 @@
    <package name="main" extends="struts-default">
      
       <action name="inicio"> 
-            <result>/WEB-INF/pages/index.jsp</result>
+            <result>/WEB-INF/pages/lista_equipamento.jsp</result>
       </action>
       
 

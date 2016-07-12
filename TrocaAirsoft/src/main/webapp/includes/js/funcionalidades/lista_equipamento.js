@@ -1,9 +1,18 @@
 $( document ).ready(function() {
 
+	/* 
+	 * ROLAR PARA A DIV
+	 * 
+	$('html, body').animate({
+        scrollTop: $("#tab_grid_result").offset().top
+    }, 2000);
+	*/
 	
 	
+	$('#container_tab_grid_result').show('drop',2000);
 	
 	
+	//CONFIGURACAO DO JQUERY DATA_TABLES
 	oTable = $('#tab_grid_result').dataTable({
 		
 		"bSort": true,
@@ -13,13 +22,8 @@ $( document ).ready(function() {
 		"bLengthChange": true,
 		"bDestroy": true,
 		"sPaginationType": "full_numbers",
-		//"sAjaxSource": "ajaxSource",
 		"sServerMethod": "POST",
 		
-		//"aoColumns": [
-			//null
-		//],
-						
 		"oLanguage": {
 			"sSearch": "Filtrar Resultado na Lista&nbsp;&nbsp;&nbsp;&nbsp;",
 			"sInfo": "Mostrando _START_ at&eacute; _END_ de _TOTAL_ registros",
@@ -37,10 +41,6 @@ $( document ).ready(function() {
 		    		"sPrevious": " Anterior " 
 		    }
 		},
-		
-		//"fnDrawCallback": function( oSettings ) {
-			//$(idDivExibicao).show();
-		//}
 		
 	});
    				

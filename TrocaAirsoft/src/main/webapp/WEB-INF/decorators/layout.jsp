@@ -42,31 +42,13 @@
 	    <script src="includes/js/cbpAnimatedHeader.js"></script>
 	    <script src="includes/js/jquery.multiselect.js"></script>
 	    <script src="includes/js/jquery.dataTables.js"></script>
+	    <script src="includes/js/jquery.maskedinput.js"></script>
        	
-		<decorator:head />
+       	<!-- Arquivos JS Proprietários -->
+       	<script src="includes/js/funcionalidades/layout.js"></script>
+       	
 		
-		<script type="text/javascript">
-
-   			$( document ).ready(function() {
-
-   				$("#logo").show("drop", 1300);
-
-   				$(".combo_explode").multiselect({
-   				   show: ["explode", 500],
-   				   hide: ["explode", 1000],
-   				   selectedList: 3
-   				});
-   				
-   				
-   				//TESTA SE O BROWSER É ORIUNDO DE UM DEVICE MOBILE	
-   				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   					$('html, body').stop().animate({
-   						scrollTop: $('#tableBuscaProfissional').offset().top -280
-   					},  1500, 'easeInOutExpo');
-   				}
-			});
-       		
-       	</script>
+		<decorator:head />
 		
 	</head>
 
@@ -120,7 +102,8 @@
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Eventos</a></li>
         			<li><a href="#"><i class="fa fa-crosshairs"></i> Vídeos</a></li>
         			
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Fale Conosco</a></li>
+        			<li><a href="#div_modal_fale_conosco" data-toggle="modal"><i class="fa fa-crosshairs"></i> Fale Conosco</a></li>
+        			
         		</ul>	
 				</div>
           </div>
@@ -130,6 +113,81 @@
         <!--  FIM BARRA DE NAVEGAÇÃO -->
         <!-- ************************************************************************************************** -->
         
+        
+        <!-- ************************************************************************************************** -->
+		<!-- DIV MODAL FALE CONOSCO -->
+		<!-- ************************************************************************************************** -->
+		<div class="modal fade" id="div_modal_fale_conosco" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content div_modal_content">
+			      
+					<div class="modal-header">
+		        		<h4 class="modal-title div_modal_title"><i class="fa fa-comments"></i> Fale Conosco</h4>
+		      		</div>
+		      
+		      		<div class="modal-body">
+				        		
+		        		<form id="form_fale_conosco">
+							
+							<div class="form-group">
+									<label for="nome">*Nome</label>
+									<input type="text" class="form-control" id="nome" placeholder="Nome">
+							</div>
+							
+							<div class="form-group">
+									<label for="email">*Email</label>
+									<input type="email" class="form-control email" id="email" placeholder="Email">
+							</div>
+							
+							<div class="form-group">
+									<label for="telefone_fixo">*Telefone Fixo</label>
+									<input type="text" class="form-control telefone" id="telefone_fixo" placeholder="Telefone Fixo">
+							</div>
+							
+							<div class="form-group">
+									<label for="telefone_celular">*Telefone Celular</label>
+									<input type="text" class="form-control telefone" id="telefone_celular" placeholder="Telefone Celular">
+							</div>
+							
+							<div class="form-group">
+									<label for="assunto">*Assunto</label>
+									<br/>
+									<select id="assunto" class="assunto">
+										<option value="0">...Selecione...</option>
+										<option value="1">Quero ser um Parceiro</option>
+										<option value="2">Dúvidas</option>
+										<option value="3">Sugestão</option>
+										<option value="4">Crítica</option>
+										<option value="5">Orientações Técnicas</option>
+									</select>
+							</div>
+							
+							<div class="form-group">
+									<label for="mensagem">*Mensagem</label>
+									<br/>
+									<textarea id="mensagem" class="mensagem" placeholder="Digite aqui sua mensagem" rows="5"></textarea>
+							</div>
+							
+							<div>
+								<p><i>Os campos obrigatórios são marcados com *.</i></p>
+							</div>
+	
+						</form>
+								
+	      			</div>
+			      
+					<div class="modal-footer">
+						<button class="bt_acao" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Fechar</button>
+		  				<button class="bt_acao"><i class="fa fa-send"></i>&nbsp;Enviar</button>
+		      		</div>
+				      
+	    		</div>
+	  		</div>
+		</div>
+		<!-- ************************************************************************************************** -->
+		<!-- FIM DIV MODAL FALE CONOSCO -->
+		<!-- ************************************************************************************************** -->
+	  
 
 		<!-- ************************************************************************************************** -->
 	   	<!-- HEADER FUNDO IMAGEM -->
@@ -171,7 +229,7 @@
 									<div class="modal-content div_modal_content">
 								      
 										<div class="modal-header">
-							        		<h4 class="modal-title div_modal_title">Login</h4>
+							        		<h4 class="modal-title div_modal_title"><i class="fa fa-user"></i> Login</h4>
 							      		</div>
 							      
 							      		<div class="modal-body">
@@ -265,7 +323,7 @@
 						<div class="col-lg-6"></div>
 					
 						<div class="col-lg-6 text-left">
-							<a href="#div_modal_pesquisa_detalhada" data-toggle="modal" class="link_pesquisa_detalhada"><i class="fa fa-navicon"></i>&nbsp;Pesquisa Detalhada</a>
+							<a href="#div_modal_pesquisa_detalhada" data-toggle="modal" class="link_pesquisa_detalhada"><i class="fa fa-binoculars"></i>&nbsp;Pesquisa Detalhada</a>
 						</div>
 						
 						<!-- ************************************************************************************************** -->
@@ -276,7 +334,7 @@
 						    	<div class="modal-content div_modal_content">
 						      
 									<div class="modal-header">
-						        		<h4 class="modal-title div_modal_title">Pesquisa Detalhada</h4>
+						        		<h4 class="modal-title div_modal_title"><i class="fa fa-search"></i>&nbsp;Pesquisa Detalhada</h4>
 						      		</div>
 						      
 						      		<div class="modal-body">
@@ -289,7 +347,7 @@
 														<font>Local:</font>
 													</td>
 													<td>
-														<select multiple id="combo_local" class="combo_explode">
+														<select multiple id="combo_local" class="combo_multi">
 															<option value="1">Rio de Janeiro</option>
 								                            <option value="2">São Paulo</option>
 								                            <option value="3">Minas Gerais</option>
@@ -302,7 +360,7 @@
 														<font>Marcador:</font>
 													</td>
 													<td>
-														<select multiple id="combo_marcador" class="combo_explode">
+														<select multiple id="combo_marcador" class="combo_multi">
 															<optgroup label="Sistema de Disparo">
 																<option value="1">Elétrica (AEG/AEP)</option>
 								                            	<option value="2">Gás (GBB)</option>
@@ -336,7 +394,7 @@
 														<font>Loadout:</font>
 													</td>
 													<td>
-														<select multiple id="combo_loadout" class="combo_explode">
+														<select multiple id="combo_loadout" class="combo_multi">
 															<option value="1">Óculos de Proteção</option>
 															<option value="2">Máscara</option>
 															<option value="3">Luva</option>
@@ -354,7 +412,7 @@
 														<font>Acessórios:</font>
 													</td>
 													<td>
-														<select multiple id="combo_acessorios" class="combo_explode">
+														<select multiple id="combo_acessorios" class="combo_multi">
 															<option value="1">Red Dot</option>
 															<option value="2">Protetor de Red Dot</option>
 															<option value="3">Luneta</option>
@@ -371,7 +429,7 @@
 														<font>Upgrade:</font>
 													</td>
 													<td>
-														<select multiple id="combo_upgrade" class="combo_explode">
+														<select multiple id="combo_upgrade" class="combo_multi">
 															<option value="1">Mola</option>
 															<option value="2">Cilindro</option>
 															<option value="4">Cabeça de Cilindro</option>
@@ -392,7 +450,7 @@
 														<font>Outros:</font>
 													</td>
 													<td>
-														<select multiple id="combo_outros" class="combo_explode">
+														<select multiple id="combo_outros" class="combo_multi">
 															<option value="1">BB's 0.20g</option>
 															<option value="1">BB's 0.25g</option>
 															<option value="4">Alvo</option>
@@ -442,35 +500,92 @@
 		<!-- ************************************************************************************************** -->    
 
 
-
-	     
-	    
-	    <!-- ************************************************************************************************** -->
-	   	<!-- DIV'S DESTAQUE PREMIUM -->
-		<!-- ************************************************************************************************** -->
 	    <div class="container-fluid">
-        	<div class="row container_div_destaque_premium">
-        		<div class="col-lg-11 div_equip div_destaque_premium" >
+        	<div class="row">
+        
+        		<!-- ************************************************************************************************** -->
+  				<!-- DIV'S DESTAQUE PREMIUM -->
+				<!-- ************************************************************************************************** -->	
+        		<div class="col-lg-2 div_equip div_destaque_premium">
         			<p><i class="fa fa-star"></i>&nbsp;Destaque</p>
+        			
+        			<table>
+        				
+        				<tr>
+        					<td>
+        						<hr>
+       							<font>Cinto tático tipo Mole</font>
+       							<br/>
+       							<font class="div_destaque_premium_valor">R$: 120,00</font>
+       							<br/>
+       							<a href="#">
+       								<img id="" alt="cinto tático" title="cinto tático" src="includes/thumbnail/cinto_tatico_160x160.png">
+       							</a>
+       							<br/>
+       							<font>www.falconarmas.com.br</font>
+        					</td>
+        				</tr>
+        				
+        				<tr>
+        					<td>
+        						<hr>
+       							<font>Cyma Beretta M92F - AEP</font>
+       							<br/>
+       							<font style="color: red;">R$: 990,00</font>
+       							<br/>
+       							<a href="#">
+       								<img id="" alt="beretta m92f" title="beretta m92f" src="includes/thumbnail/Aep-160x160.png">
+       							</a>
+       							<br/>
+       							<font>www.qgairsoft.com</font>
+        					</td>
+        				</tr>
+        				
+        				<tr>
+        					<td>
+        						<hr>
+       							<font>Boot Tático Desert</font>
+       							<br/>
+       							<font style="color: red;">R$: 230,00</font>
+       							<br/>
+       							<a href="#">
+       								<img id="" alt="boot tático" title="boot tático" src="includes/thumbnail/boot_160x160.png">
+       							</a>
+       							<br/>
+       							<font>www.ventureshop.com.br</font>
+        					</td>
+        				</tr>
+        				
+        			</table>
         		</div>	
+				<!-- ************************************************************************************************** -->
+  				<!-- FIM DIV'S DESTAQUE PREMIUM -->
+				<!-- ************************************************************************************************** -->        		
+        		
+        		
+        		<!-- ************************************************************************************************** -->
+  				<!-- BODY DAS PÁGINAS DECORADAS
+				<!-- ************************************************************************************************** -->
+        		<div class="col-lg-9 div_equip container_div_conteudo_principal">
+	    			<decorator:body />
+        		</div>
+				<!-- ************************************************************************************************** -->
+  				<!-- BODY DAS PÁGINAS DECORADAS
+				<!-- ************************************************************************************************** -->        			
+
         	</div>
        	</div>
-     	<!-- ************************************************************************************************** -->
-  		<!-- FIM DIV'S DESTAQUE PREMIUM -->
-		<!-- ************************************************************************************************** -->
+     	
      	
 	    
-	    <!-- ************************************************************************************************** -->
-  		<!-- BODY DAS PÁGINAS DECORADAS
-		<!-- ************************************************************************************************** -->
-	    <decorator:body />
+	    
 	    
 	    
 	    
 	    <!-- ************************************************************************************************** -->
 		<!-- FOOTER SOBRE NÓS-->
 	 	<!-- ************************************************************************************************** -->
-		<div class="row bg-primary sobre_nos">
+		<div id="div_sobre_nos" class="row bg-primary sobre_nos">
       
 	        <div class="col-lg-12 sobre_nos_title">
                       <h1>Sobre Nós</h1>
@@ -526,8 +641,6 @@
 	          <!-- ************************************************************************************************** -->
 			  <!-- FIM FOOTER SOBRE NÓS-->
 	 		  <!-- ************************************************************************************************** -->
-		
-		
-				
+			
 	</body>
 </html>

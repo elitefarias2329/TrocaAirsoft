@@ -67,11 +67,13 @@ BARRA DE NAVEGAÇÃO
     filter: alpha(opacity=80); /* For IE8 and earlier */
     border: 0 !important;
     
+    
 }
 
 .barra_navegacao a{
 	color: #EFE09D !important;
 	font-size: 1.4em;
+	outline:none !important;
 }
 
 .barra_navegacao a:hover{
@@ -85,6 +87,31 @@ BARRA DE NAVEGAÇÃO
 
 /**************************************
 FIM BARRA DE NAVEGAÇÃO
+**************************************/
+
+
+
+/**************************************
+DIV MODAL FALE CONOSCO
+**************************************/
+
+.telefone{
+	width:300px !important;	
+}
+
+.assunto{
+	width: 300px !important;
+}
+
+.mensagem{
+	width: 560px !important;
+}
+
+
+
+
+/**************************************
+FIM DIV MODAL FALE CONOSCO
 **************************************/
 
 
@@ -142,17 +169,17 @@ DIV BUSCAR  + PESQUISA DETALHADA
 	color:#988D66 !important;
 	height:60px !important;
 	border-radius:10px !important ;
-	padding:5px;
-	text-align:center !important;
+	padding:10px;
 	width: 500px !important;
+	outline:none!important;
 	
 }
 
 .link_pesquisa_detalhada{
 	margin-left: 1.4em !important;
-	font-size: 1.2em !important;
+	font-size: 1.4em !important;
 	color:#EFE09D !important;
-	text-decoration:underline;
+	text-decoration:none !important;
 	outline:none!important;
 }
 
@@ -233,12 +260,14 @@ DIV LOGO
 DIV LOGO
 **************************************/
 
+
+
+
 /**************************************
 DIV TROCA EQUIPAMENTO
 **************************************/
 
 .div_equip{
-	
 	margin: 1em;
 	border-radius: 10px ;
 }
@@ -251,9 +280,23 @@ DIV TROCA EQUIPAMENTO
 	color:#EFE09D;
 }
 
+.div_equip font{
+	font-style:italic;
+	font-size: 1.4em;
+	color:#988D66;
+}
+/**************************************
+FIM DIV TROCA EQUIPAMENTO
+**************************************/
+
+
+
+/**************************************
+DIV ANUNCIAR
+**************************************/
 
 .div_anunciar_container{
-	margin-top:3.5em !important;
+	margin-top:1em !important;
 }
 
 .div_anunciar{
@@ -268,20 +311,17 @@ DIV TROCA EQUIPAMENTO
 .div_anunciar button{
 	font-size:2em !important;
 }
+
 /**************************************
-FIM DIV TROCA EQUIPAMENTO
+FIM DIV ANUNCIAR
 **************************************/
+
 
 /**************************************
 DIV DESTAQUE PREMIUM
 **************************************/
-.container_div_destaque_premium{
-	width:30%;
-	float:left;
-}
 
 .div_destaque_premium{
-	height: 1500px;
 	background-color:#FFF !important;
 }
 
@@ -290,16 +330,42 @@ DIV DESTAQUE PREMIUM
 	color:#988D66;
 }
 
-.div_equip font{
-	
-	font-style:italic;
-	font-size: 1.4em;
-	color:#988D66;
-
+.div_destaque_premium table{
+	text-align:center !important;
+	width: 100% !important;
+	font-size: 1em !important;
+	margin-top:1em !important;
 }
+
+.div_destaque_premium_valor{
+	 color: red !important;
+	 font-style: italic!important;
+}
+
+.div_destaque_premium a{
+	text-decoration:none !important;
+}
+
+.div_destaque_premium img:hover{
+	opacity: 0.8;
+}
+
+
 
 /**************************************
 FIM DIV DESTAQUE PREMIUM
+**************************************/
+
+
+/**************************************
+DIV CONTEUDO PRINCIPAL
+**************************************/
+.container_div_conteudo_principal{
+	
+	margin-left: 5em !important;
+}
+/**************************************
+FIM DIV CONTEUDO PRINCIPAL
 **************************************/
 
 /**************************************
@@ -340,11 +406,6 @@ TABELA FILTRO PESQUISA
 .table_grupo_filtro td{
 	margin-top: 1em;
 	padding:5px !important;
-}
-
-#div_modal_pesquisa_detalhada{
-	margin-top: 3em !important;
-	z-index:0 !important;
 }
 
 /**************************************
