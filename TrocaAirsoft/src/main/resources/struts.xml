@@ -10,6 +10,12 @@
             <result>/WEB-INF/pages/lista_equipamento.jsp</result>
       </action>
       
+      
+      <action name="loadCriarConta" class="br.com.trocaairsoft.action.ContaUsuarioAction" method="loadCriarConta"> 
+            <result name="success">/WEB-INF/pages/criar_conta.jsp</result>
+            <result name="error">/WEB-INF/pages/lista_equipamento.jsp</result>
+      </action>
+      
 
    </package>
 

@@ -76,7 +76,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
                 <ul class="nav navbar-nav">
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Home</a></li>
+        			<li><a href="inicio"><i class="fa fa-crosshairs"></i> Home</a></li>
         			
         			<li class="dropdown">
           				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -270,7 +270,7 @@
 		    				<!-- FIM DIV MODAL LOGIN -->
 		     				<!-- ************************************************************************************************** -->
 							
-							<a href="#" class="login_criar_conta"><i class="fa fa-user-plus"></i> Criar Conta</a>
+							<a href="loadCriarConta" class="login_criar_conta"><i class="fa fa-user-plus"></i> Criar Conta</a>
 						</div>
 					</div>
 					<!-- ************************************************************************************************** -->
