@@ -39,6 +39,11 @@ body {
 	font-family:serif !important;
 }
 
+
+.titulo_grande{
+	font-size: 3em !important;
+}
+
 /**************************************
 FIM PARA TODOS
 **************************************/
@@ -458,3 +463,61 @@ DIV COPYRIGHT
 FIM DIV COPYRIGHT
 **************************************/
 
+
+
+
+
+
+/**************************************
+CRIAR CONTA JSP
+**************************************/
+
+.fonte_itens_prefil{
+	 color:#988D66;
+	 font-size: 1.4em; 
+}
+
+#form_cadastro{
+	margin-top:1em;
+}
+
+#form_cadastro input{
+	max-width: 700px !important;
+}	
+	
+
+#perfil_premium_info{
+	color:#988D66;
+}
+
+
+.cpf_cnpj{
+	width: 300px !important;
+}
+
+.cep{
+	width: 300px !important;
+}
+
+#nao_sei_cep{
+	color:#988D66;
+	font-size: .9em !important;
+	font-style: italic; 
+}
+
+#nao_sei_cep:hover{
+	text-decoration: underline  !important;
+}
+
+.estado{
+	width: 300px !important;
+}
+
+.senha{
+	width: 300px !important;
+}
+
+
+/**************************************
+FIM CRIAR CONTA JSP
+**************************************/

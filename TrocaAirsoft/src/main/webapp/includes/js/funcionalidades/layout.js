@@ -3,8 +3,8 @@ $( document ).ready(function() {
 	$("#logo").show("drop", 1300);
 	
 	
-	$("#telefone_fixo ").mask("(99) 9999-9999");
-	$("#telefone_celular").mask("(99) 99999-9999");
+	$(".telefone_fixo ").mask("(99) 9999-9999");
+	$(".telefone_celular").mask("(99) 99999-9999");
 
 	$(".combo_multi").multiselect({
 	   selectedList: 3

@@ -131,22 +131,22 @@
 							
 							<div class="form-group">
 									<label for="nome">*Nome</label>
-									<input type="text" class="form-control" id="nome" placeholder="Nome">
+									<input type="text" class="form-control" id="nome" placeholder="Nome" maxlength="60">
 							</div>
 							
 							<div class="form-group">
 									<label for="email">*Email</label>
-									<input type="email" class="form-control email" id="email" placeholder="Email">
+									<input type="email" class="form-control email" id="email" placeholder="Email" maxlength="60">
 							</div>
 							
 							<div class="form-group">
 									<label for="telefone_fixo">*Telefone Fixo</label>
-									<input type="text" class="form-control telefone" id="telefone_fixo" placeholder="Telefone Fixo">
+									<input type="text" class="form-control telefone telefone_fixo" id="telefone_fixo" placeholder="Telefone Fixo">
 							</div>
 							
 							<div class="form-group">
 									<label for="telefone_celular">*Telefone Celular</label>
-									<input type="text" class="form-control telefone" id="telefone_celular" placeholder="Telefone Celular">
+									<input type="text" class="form-control telefone telefone_celular" id="telefone_celular" placeholder="Telefone Celular">
 							</div>
 							
 							<div class="form-group">
@@ -169,7 +169,7 @@
 							</div>
 							
 							<div>
-								<p><i>Os campos obrigatórios são marcados com *.</i></p>
+								<p><i>Os campos obrigatórios são marcados com *</i></p>
 							</div>
 	
 						</form>
