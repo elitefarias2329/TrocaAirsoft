@@ -7,15 +7,16 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author andre.gomes
  *
  */
-public class ContaUsuarioAction extends ActionSupport {
+public class TimesAction extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;
 
-	
+
+
 	/**
 	 * Construtor
 	 */
-	public ContaUsuarioAction(){
+	public TimesAction(){
 		
 	}
 	
@@ -25,7 +26,7 @@ public class ContaUsuarioAction extends ActionSupport {
 	 * 
 	 * @return
 	 */
-	public String loadCriarConta(){
+	public String load(){
 		return SUCCESS;
 	}
 	

@@ -8,12 +8,13 @@
 	<body>
 
 		
-		<div class="row container-fluid" style="text-align: center!important;">
+		<div class="row container-fluid text-center">
 			<div class="col-lg-12">
 				<p class="titulo_grande"><i class="fa fa-user-plus"></i>&nbsp;Criar Conta</p>
 			</div>
 		</div>		
 		
+		<div id="div_scroll"></div>
 		<br/>
 		<br/> 
 		
@@ -40,13 +41,12 @@
 					<li>R$: 9,99 mensais</li>
 					<li>Anuncie quantos itens quiser</li>
 					
-					<li>Ganhe 3 anúncios Destaque Premium 
-						<a href="#" id="perfil_premium_info"
-									data-toggle="tooltip" data-placement="top"
-									title="O anúncio destaque premium aparece em todas as páginas no banner esquerdo e aumenta muito a vizualização pelos usuários."> 
-						   	        
-							<i class="fa fa-question-circle"></i>
-						</a>
+					<li>Ganhe 3 anúncios Destaque Premium
+						<button id="perfil_premium_info" data-placement="top"
+						   data-toggle="popover" title="Destaque Premium" data-trigger="focus" 
+						   data-content="O anúncio destaque premium aparece em todas as páginas no banner esquerdo e aumenta muito a vizualização pelos usuários.">
+						   <i class="fa fa-question-circle"></i>
+						</button>
 					</li>
 					
 					<li>Até 10 fotos em Alta Definição por anúncio</li>
@@ -57,13 +57,12 @@
 			
 		</div>
 		
-		
 		<div class="row container-fluid">
-			<div class="col-lg-11 div_equip div_destaque_premium">
+			<div  class="col-lg-11 div_equip div_destaque_premium">
 			
 				<form id="form_cadastro" class="fonte_itens_prefil">
 							
-					<div class="form-group">
+					<div  class="form-group">
 						<label for="">* Tipo de Perfil</label>
 						<br/>
 						<label class="radio-inline">
@@ -120,11 +119,6 @@
  					</div>
 					
 					<div class="form-group">
-						<label for="cad_apelido">* Apelido</label>
-						<input type="text" class="form-control" id="cad_apelido" placeholder="Apelido" maxlength="60">
-					</div>
-					
-					<div class="form-group">
 						<label for="cad_email">* Email</label>
 						<input type="email" class="form-control email" id="cad_email" placeholder="Email" maxlength="60">
 					</div>
@@ -168,16 +162,21 @@
 					<div class="form-group">
 						<label for="cad_repetir_senha">Repetir Senha</label>
 						<input type="password" class="form-control senha" id="cad_repetir_senha" placeholder="Repetir Senha">
+						<hr/>
 					</div>
 					
 					<div class="form-group">
 						<label class="checkbox-inline">
   							<input type="checkbox" id="cb_termos" >
-  								Li e Aceito os <a href="#">Termos e Condições</a> desse site.
+  								Li e Aceito os <a href="#" id="cad_link_termos">Termos e Condições</a> desse site.
 						</label>
-						
-						<hr/>
 					</div>
+					
+					<div class="form-group text-center">
+						<button class="bt_acao"><i class="fa fa-send"></i>&nbsp;Enviar</button>
+					</div>
+					
+					<br/>
 					
 					<div>
 						<p><i>Os campos obrigatórios são marcados com *</i></p>

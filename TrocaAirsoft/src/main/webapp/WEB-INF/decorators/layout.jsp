@@ -86,21 +86,21 @@
           				</a>
           				
           				<ul class="dropdown-menu">
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> O que é Airsoft?</a></li>
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Legislação</a></li>
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Dicionário</a></li>
-            				<li><a href="#"><i class="fa fa-long-arrow-right"></i> Dicas</a></li>
+            				<li><a href="loadDefinicaoAirsoft"><i class="fa fa-long-arrow-right"></i> O que é Airsoft?</a></li>
+            				<li><a href="loadlegislacaoAirsoft"><i class="fa fa-long-arrow-right"></i> Legislação</a></li>
+            				<li><a href="loadDicionarioAirsoft"><i class="fa fa-long-arrow-right"></i> Dicionário</a></li>
+            				<li><a href="loadDicasAirsoft"><i class="fa fa-long-arrow-right"></i> Dicas</a></li>
 				            
           				</ul>
         			</li>
         			
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Parceiros</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Armeiros</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Pintura e Camuflagem</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Aluguel de Equipamento</a></li>
-					<li><a href="#"><i class="fa fa-crosshairs"></i> Times</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Eventos</a></li>
-        			<li><a href="#"><i class="fa fa-crosshairs"></i> Vídeos</a></li>
+        			<li><a href="loadParceiros"><i class="fa fa-crosshairs"></i> Parceiros</a></li>
+        			<li><a href="loadArmeiros"><i class="fa fa-crosshairs"></i> Armeiros</a></li>
+        			<li><a href="loadPinturaCamuflagem"><i class="fa fa-crosshairs"></i> Pintura e Camuflagem</a></li>
+        			<li><a href="loadAluguelEquipamento"><i class="fa fa-crosshairs"></i> Aluguel de Equipamento</a></li>
+					<li><a href="loadTimes"><i class="fa fa-crosshairs"></i> Times</a></li>
+        			<li><a href="loadEventos"><i class="fa fa-crosshairs"></i> Eventos</a></li>
+        			<li><a href="loadVideos"><i class="fa fa-crosshairs"></i> Vídeos</a></li>
         			
         			<li><a href="#div_modal_fale_conosco" data-toggle="modal"><i class="fa fa-crosshairs"></i> Fale Conosco</a></li>
         			
