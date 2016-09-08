@@ -26,8 +26,7 @@
 				<ul class="fonte_itens_prefil">
 					<li>Grátis</li>
 					<li>Anuncie até 10 itens</li>
-					<li>Até 5 fotos por anúncio</li>
-					<li>Um telefone para contato</li>
+ 					<li>Até 5 fotos por anúncio</li>
 				</ul>
 					
 			</div>
@@ -50,7 +49,6 @@
 					</li>
 					
 					<li>Até 10 fotos em Alta Definição por anúncio</li>
-					<li>Até 3 Telefones para contato com Destaque</li>
 				</ul>
 				
 			</div>
@@ -155,12 +153,12 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="cad_senha">Senha</label>
+						<label for="cad_senha">* Senha</label>
 						<input type="password" class="form-control senha" id="cad_senha" placeholder="Senha">
 					</div>
 					
 					<div class="form-group">
-						<label for="cad_repetir_senha">Repetir Senha</label>
+						<label for="cad_repetir_senha">* Repetir Senha</label>
 						<input type="password" class="form-control senha" id="cad_repetir_senha" placeholder="Repetir Senha">
 						<hr/>
 					</div>
