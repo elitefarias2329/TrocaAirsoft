@@ -11,7 +11,12 @@
       <welcome-file>index.jsp</welcome-file>
    </welcome-file-list>
    
-   
+	<!-- Spring -->
+	<listener>
+		<listener-class>
+        	org.springframework.web.context.ContextLoaderListener
+   		</listener-class>
+	</listener> 
    
    	<!-- Sitemesh -->
 	<filter>

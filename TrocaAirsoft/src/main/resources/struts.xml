@@ -4,73 +4,94 @@
    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
    
-   <package name="main" extends="struts-default">
-     
-      <action name="inicio"> 
-            <result>/WEB-INF/pages/lista_equipamento.jsp</result>
-      </action>
+	<!-- PACKAGE -->
+	<package name="main" extends="struts-default">
       
-      
-      <action name="loadCriarConta" class="br.com.trocaairsoft.action.ContaUsuarioAction" method="loadCriarConta"> 
-            <result name="success">/WEB-INF/pages/criar_conta.jsp</result>
-            <result name="error">/WEB-INF/pages/lista_equipamento.jsp</result>
-      </action>
-      
-      
-      <action name="loadDefinicaoAirsoft" > 
-            <result>/WEB-INF/pages/definicao_airsoft.jsp</result>
-      </action>
-      
-      <action name="loadlegislacaoAirsoft" > 
-            <result>/WEB-INF/pages/legislacao_airsoft.jsp</result>
-      </action>
-      
-      <action name="loadDicasAirsoft" > 
-            <result>/WEB-INF/pages/dicas_airsoft.jsp</result>
-      </action>
-      
-      <action name="loadDicionarioAirsoft" > 
-            <result>/WEB-INF/pages/dicionario_airsoft.jsp</result>
-      </action>
-      
-      <action name="loadParceiros" class="br.com.trocaairsoft.action.ParceirosAction" method="load"> 
-            <result name="success">/WEB-INF/pages/parceiros.jsp</result>
-            <result name="error">/WEB-INF/pages/parceiros.jsp</result>
-      </action>
-      
-      <action name="loadArmeiros" class="br.com.trocaairsoft.action.ArmeirosAction" method="load"> 
-            <result name="success">/WEB-INF/pages/armeiros.jsp</result>
-            <result name="error">/WEB-INF/pages/armeiros.jsp</result>
-      </action>
-      
-      <action name="loadPinturaCamuflagem" class="br.com.trocaairsoft.action.PinturaCamuflagemAction" method="load"> 
-            <result name="success">/WEB-INF/pages/pintura_camuflagem.jsp</result>
-            <result name="error">/WEB-INF/pages/pintura_camuflagem.jsp</result>
-      </action>
-      
-      <action name="loadAluguelEquipamento" class="br.com.trocaairsoft.action.AluguelEquipamentoAction" method="load"> 
-            <result name="success">/WEB-INF/pages/aluguel_equipamento.jsp</result>
-            <result name="error">/WEB-INF/pages/aluguel_equipamento.jsp</result>
-      </action>
-      
-      <action name="loadTimes" class="br.com.trocaairsoft.action.TimesAction" method="load"> 
-            <result name="success">/WEB-INF/pages/times.jsp</result>
-            <result name="error">/WEB-INF/pages/times.jsp</result>
-      </action>
-      
-      <action name="loadEventos" class="br.com.trocaairsoft.action.EventosAction" method="load"> 
-            <result name="success">/WEB-INF/pages/eventos.jsp</result>
-            <result name="error">/WEB-INF/pages/eventos.jsp</result>
-      </action>
-      
-      <action name="loadVideos"> 
-            <result>/WEB-INF/pages/videos.jsp</result>
-      </action>
-      
-      
-      
-      
+		
+		<!-- RESULT TYPES E INTERCEPTORS -->
+		<result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+    	</result-types>
+    	
+    	<interceptors>
+	        <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+    	</interceptors>
+		
+		<!-- FIM RESULT TYPES E INTERCEPTORS -->
 
+
+		<!-- ACTIONS -->
+		
+		<action name="inicio"> 
+            <result>/WEB-INF/pages/lista_equipamento.jsp</result>
+      	</action>
+      
+		<action name="loadCriarConta" class="anuncianteAction" method="loadCriarConta"> 
+		    <result name="success">/WEB-INF/pages/criar_conta.jsp</result>
+		    <result name="error">/WEB-INF/pages/lista_equipamento.jsp</result>
+		</action>
+      
+		<action name="login" class="loginAction" method="login" >
+	       	<result name="ajax" type="json" >
+	   	    	<param name="root">retornoAjax</param>
+			</result>
+		</action>
+		
+		<action name="loadDefinicaoAirsoft" > 
+    	    <result>/WEB-INF/pages/definicao_airsoft.jsp</result>
+    	</action>
+    
+	    <action name="loadlegislacaoAirsoft" > 
+			<result>/WEB-INF/pages/legislacao_airsoft.jsp</result>
+	    </action>
+	    
+	    <action name="loadDicasAirsoft" > 
+			<result>/WEB-INF/pages/dicas_airsoft.jsp</result>
+	    </action>
+	    
+	    <action name="loadDicionarioAirsoft" > 
+			<result>/WEB-INF/pages/dicionario_airsoft.jsp</result>
+	    </action>
+    
+		<action name="loadParceiros" class="parceirosAction" method="load"> 
+			<result name="success">/WEB-INF/pages/parceiros.jsp</result>
+          	<result name="error">/WEB-INF/pages/parceiros.jsp</result>
+    	</action>
+    
+	    <action name="loadArmeiros" class="armeirosAction" method="load"> 
+	        <result name="success">/WEB-INF/pages/armeiros.jsp</result>
+    	    <result name="error">/WEB-INF/pages/armeiros.jsp</result>
+	    </action>
+    
+    	<action name="loadPinturaCamuflagem" class="pinturaCamuflagemAction" method="load"> 
+			<result name="success">/WEB-INF/pages/pintura_camuflagem.jsp</result>
+          	<result name="error">/WEB-INF/pages/pintura_camuflagem.jsp</result>
+    	</action>
+    
+	    <action name="loadAluguelEquipamento" class="aluguelEquipamentoAction" method="load"> 
+	        <result name="success">/WEB-INF/pages/aluguel_equipamento.jsp</result>
+	        <result name="error">/WEB-INF/pages/aluguel_equipamento.jsp</result>
+	    </action>
+    
+	    <action name="loadTimes" class="timesAction" method="load"> 
+	    	<result name="success">/WEB-INF/pages/times.jsp</result>
+	    	<result name="error">/WEB-INF/pages/times.jsp</result>
+	    </action>
+    
+    	<action name="loadEventos" class="eventosAction" method="load"> 
+        	<result name="success">/WEB-INF/pages/eventos.jsp</result>
+          	<result name="error">/WEB-INF/pages/eventos.jsp</result>
+    	</action>
+    
+    	<action name="loadVideos"> 
+        	<result>/WEB-INF/pages/videos.jsp</result>
+    	</action>
+		
+		<!-- FIM ACTIONS -->    	
+    	
    </package>
+   <!-- FIM PACKAGE -->
+   
+   
 
 </struts>

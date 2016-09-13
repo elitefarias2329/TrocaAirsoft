@@ -32,7 +32,7 @@
 	    <!-- jQuery -->
 	    <script src="includes/js/jquery.js"></script>
 	    <script src="includes/js/jquery-ui.js"></script>
-	
+	    
 	    <!-- Bootstrap Core JavaScript -->
 	    <script src="includes/js/bootstrap.min.js"></script>
 	
@@ -219,7 +219,16 @@
 	     			<!-- ************************************************************************************************** -->
 					<div class="row">
 						<div class="col-lg-12 container_login_criar_conta">
-							<a href="#div_modal_login" data-toggle="modal" class="login_criar_conta" ><i class="fa fa-user"></i> Login</a>
+							
+							
+							<s:if test="%{#session.usuarioLogado == null}">
+								<a href="#div_modal_login" data-toggle="modal" class="login_criar_conta" ><i class="fa fa-user"></i> Login</a>
+								
+							</s:if>
+							<s:else>
+								<h3 style="color: white"><i>${sessionScope.usuarioLogado.nome}</i></h3>
+							</s:else>
+							
 							
 							<!-- ************************************************************************************************** -->
 			    			<!-- DIV MODAL LOGIN -->
@@ -237,12 +246,12 @@
 							        		<form id="form_login">
 												<div class="form-group">
 														<label for="email">Email</label>
-														<input type="email" class="form-control" id="email" placeholder="Email">
+														<input type="email" name="vo.email" class="form-control" id="email" placeholder="Email" maxlength="60"/>
 												</div>
 						
 												<div class="form-group">
 														<label for="senha">Senha</label>
-			 											<input type="password" class="form-control" id="senha" placeholder="Senha">
+			 											<input type="password" name="vo.senha" class="form-control" id="senha" placeholder="Senha" maxlength="30"/>
 												</div>
 											</form>
 													
@@ -260,7 +269,7 @@
 								      
 										<div class="modal-footer">
 											<button class="bt_acao" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Fechar</button>
-							  				<button class="bt_acao"><i class="fa fa-sign-in"></i>&nbsp;Entrar</button>
+							  				<button class="bt_acao" id="bt_entrar"><i class="fa fa-sign-in"></i>&nbsp;Entrar</button>
 							      		</div>
 									      
 						    		</div>
