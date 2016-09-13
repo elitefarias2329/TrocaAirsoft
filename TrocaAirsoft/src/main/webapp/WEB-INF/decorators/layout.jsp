@@ -46,6 +46,7 @@
        	
        	<!-- Arquivos JS Proprietários -->
        	<script src="includes/js/funcionalidades/layout.js"></script>
+       	<script src="includes/js/util/mensagens.js"></script>
        	
 		
 		<decorator:head />
@@ -222,11 +223,13 @@
 							
 							
 							<s:if test="%{#session.usuarioLogado == null}">
-								<a href="#div_modal_login" data-toggle="modal" class="login_criar_conta" ><i class="fa fa-user"></i> Login</a>
-								
+								<a href="#div_modal_login" data-toggle="modal" class="login_criar_conta" ><i class="fa fa-sign-in"></i> Login</a>
+								<a href="loadCriarConta" class="login_criar_conta"><i class="fa fa-user-plus"></i> Criar Conta</a>
 							</s:if>
 							<s:else>
-								<h3 style="color: white"><i>${sessionScope.usuarioLogado.nome}</i></h3>
+								<span class="nome_usuario_logado">Bem vindo ${sessionScope.usuarioLogado.nome} !</span>
+								<a href="loadCriarConta" class="login_criar_conta"><i class="fa fa-user"></i> Minha Conta</a>
+								<a href="logout" class="login_criar_conta"><i class="fa fa-sign-out"></i>Sair</a>
 							</s:else>
 							
 							
@@ -242,6 +245,14 @@
 							      		</div>
 							      
 							      		<div class="modal-body">
+									        		
+									        <div id="login_container_mensagem_erro" >
+									        	<p id="login_paragrafo_mensagem_erro" class="mensagem_erro"></p>
+									        </div>		
+									        		
+									        <div class="loading_gif text-center" style="display:none;">
+												<img src="includes/img/reload.gif">									        	
+									        </div>		
 									        		
 							        		<form id="form_login">
 												<div class="form-group">
@@ -278,8 +289,6 @@
 							<!-- ************************************************************************************************** -->
 		    				<!-- FIM DIV MODAL LOGIN -->
 		     				<!-- ************************************************************************************************** -->
-							
-							<a href="loadCriarConta" class="login_criar_conta"><i class="fa fa-user-plus"></i> Criar Conta</a>
 						</div>
 					</div>
 					<!-- ************************************************************************************************** -->

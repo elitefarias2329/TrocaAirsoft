@@ -15,9 +15,14 @@
 	 */
     $(document).ready(function(){
 
+    	//TESTA SE O BROWSER É ORIUNDO DE UM DEVICE MOBILE	
+    	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    		$('html, body').stop().animate({
+    			scrollTop: $('#tableBuscaProfissional').offset().top -280
+    		},  1500, 'easeInOutExpo');
+    	}
     	
     	$("#logo").show("drop", 1300);
-    	
     	
     	$(".telefone_fixo ").mask("(99) 9999-9999");
     	$(".telefone_celular").mask("(99) 99999-9999");
@@ -26,100 +31,77 @@
     	   selectedList: 3
     	});
     	
-    	//TESTA SE O BROWSER É ORIUNDO DE UM DEVICE MOBILE	
-    	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    		$('html, body').stop().animate({
-    			scrollTop: $('#tableBuscaProfissional').offset().top -280
-    		},  1500, 'easeInOutExpo');
-    	}
-    	
-    	
-    	/**
-    	 * TODO: IMPLEMENTAR A BARRINHA DE LOADING *** USAR A DO BOOTSTRAP
-    	 * **/
     	
      	/**
      	 * Função: ajaxSend 
      	 * Tipo: JQUERY / AJAX
      	 * Objetivo: Realiza alguma função no momento em que um requisição AJAX é feita ao servidor.
+     	 * */
      	 
-         $("#barra_carregando").ajaxSend(function() {
-   		     $("#barra_carregando").show();
+         $(document).ajaxSend(function() {
+   		     $(".loading_gif").show();
          });
-         */
+         
 
       	/**
       	 * Função: ajaxStop 
       	 * Tipo: JQUERY / AJAX
       	 * Objetivo: Realiza alguma função no momento em que um requisição AJAX é retornada do servidor.
+      	 */
       	 
-         $("#barra_carregando").ajaxStop(function() {
-             $("#barra_carregando").hide();
+         $(document).ajaxStop(function() {
+             $(".loading_gif").hide();
          });
-         */
-    	 
     	 
     	 /**---> Eventos: 'Click' 
     	 ------------------------- */
          
          $("#bt_entrar").click(function(){
-        	 $(this).login();
+        	 $(this).login("inicio");
     	 });
     	 
     });      /** FIM -  $(document).ready() **/
     
     
     /**
-     * Função: efetivar_percentuais
+     * Função: login(toAction)
      * Tipo: JQUERY / AJAX
-     * Objetivo: Atualiza as Datas de Efetivação dos percentuais selecionados na tabela PERC_AUTOM_CONTR_RSSRO.
+     * Objetivo: 
      * 			
      */
      $.fn.extend({
-    	 login:function() {
+    	 login:function(toActionPage) {
 
   		    $.ajax({
   		    		type:     "POST",
   		    		cache:    false ,  
-  		    		async: 	  false, 
+  		    		async: 	  true,
   		    		dataType: 'json', 
   		    		url: 	  "login", 
   		    		data: 	  $('#form_login :input'),
 
-   			success: function(obj_retorno_ajax) {
-                           
-   				if (obj_retorno_ajax.tipoRetornado == "success") {
-   					
-   					alert("sucesso");
-   					
-//   					$(this).exibir_mensagem({ mensagem:obj_retorno_ajax.objetoRetornado,
-//							  					  tabela_mensagem:'#tbl_msg_sucesso',
-//							  					  td_mensagem:'#td_msg_sucesso' });
-//   					
-   					
-   				}
-   				else{
-   					alert("erro");
-//   					$(this).exibir_mensagem({ mensagem:obj_retorno_ajax.exceptionRetornada,
-//   											  tabela_mensagem:'#tbl_msg_erro',
-//   											  td_mensagem:'#td_msg_erro' });
-   				}
-              
-   			},
-          
-   			error: function(XMLHttpRequest, textStatus, errorThrown) {
-
-   				alert(XMLHttpRequest.responseText);
-   				
-//   				$(this).exibir_mensagem({ mensagem:("Ocorreu um erro interno: " + XMLHttpRequest.responseText),
-//   									      tabela_mensagem:'#tbl_msg_erro',
-//            	  				              td_mensagem:'#td_msg_erro' });
-   			}
-   			
-		      });  
-			
-    	 }
-     });
+		   			success: function(obj_retorno_ajax) {
+		                           
+		   				if (obj_retorno_ajax.tipoRetornado == "success") {
+		   					$('#div_modal_login').modal('toggle');
+		   					window.location.href = toActionPage;
+		   				}
+		   				else{
+		   					$(this).exibir_mensagem({ mensagem:obj_retorno_ajax.exceptionRetornada,
+		   											  container_mensagem:'#login_container_mensagem_erro',
+		   											  paragrafo_mensagem:'#login_paragrafo_mensagem_erro' });
+		   				}
+		   			},
+		          
+		   			error: function(XMLHttpRequest, textStatus, errorThrown) {
+		
+		   				$(this).exibir_mensagem({ mensagem:("Ocorreu um erro interno: " + XMLHttpRequest.responseText),
+								  				  container_mensagem:'#login_container_mensagem_erro',
+								  				  paragrafo_mensagem:'#login_paragrafo_mensagem_erro' });
+		   			}
+    			});  
+	 		}
+ 		});	
     
     
 })(jQuery); /**	 FIM -  JQUERY  **/

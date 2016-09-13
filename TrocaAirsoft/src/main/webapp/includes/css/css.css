@@ -91,6 +91,10 @@ body {
 	color:#988D66 !important;
 }
 
+.mensagem_erro{
+	color: red !important;
+}
+
 /**************************************
 FIM PARA TODOS
 **************************************/
@@ -201,6 +205,12 @@ DIV LOGIN/CRIAR CONTA
 
 .login_criar_conta:hover{
 	color:#FFF !important;
+}
+
+.nome_usuario_logado{
+	color:#EFE09D !important;
+	font-style: italic !important;
+	font-size: 1.4em !important;	
 }
 
 /**************************************

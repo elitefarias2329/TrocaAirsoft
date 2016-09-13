@@ -37,7 +37,6 @@ public class LoginDAO {
 			if(null == vo.getUsuarioLogado()){
 				throw new BusinessException("E-mail ou senha inválidos.");
 			}
-			
 		}
 		finally{
 			session.close();
